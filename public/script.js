@@ -22,6 +22,64 @@ hamburger.addEventListener("click", function () {
   navMenu.classList.toggle("hidden");
 });
 
+const dinamisTeks = document.querySelector(".dinamis-text");
+
+const words = [
+  "Gak Punya Privilage",
+  "Baru Lulus Kuliah",
+  "Beda Jurusan",
+  "Pindah Jalur Karir",
+  "Bugde Pas-Pasan",
+  "Susah Cari Kerja",
+];
+
+animText = function () {
+  // i = 0;
+
+  // setInterval(() => {
+  //   dinamisTeks.innerHTML = words[(i = (i + 1) % words.length)];
+  // }, 3000);
+
+  // coba
+  // words.forEach((word) => {
+  //   console.info(word);
+  //   setInterval(() => {
+  //     dinamisTeks.innerHTML = word;
+  //   }, 3000);
+  // });
+
+  // coba 2
+  // for (const i of words) {
+  //   const word = i;
+  //   console.log(word);
+  //   dinamisTeks.innerHTML = word;
+  // }
+
+  // if (i < words.length) {
+  //   words2.forEach((word) => {
+  //     console.log(word[i]);
+  //   });
+  //   i++;
+  // } else {
+  //   console.log(`selesai`);
+  // }
+
+  let i = 0;
+  setInterval(() => {
+    dinamisTeks.innerHTML = words[i];
+    console.info(words[i++]);
+
+    if (i === words.length) {
+      i = 0;
+      // console.log(i);
+    }
+  }, 3000);
+  // };
+};
+
+animText();
+
+// animText();
 // hamburger2.addEventListener("click", function () {
 //   hamburger2.classList.toggle("hamburger-active");
 // });
